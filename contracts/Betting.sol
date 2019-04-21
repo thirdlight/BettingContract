@@ -128,7 +128,9 @@ contract Betting {
         betIds.length = 0;
     }  
     function clearPlayerAddresses() public {
-        players.length = 0;
+        for(uint256 i = 0; i < 10; i++){
+            players[i] = address(0);
+        }
     }
    // basic global variables
    function getBetId() public view returns (bytes32) {
